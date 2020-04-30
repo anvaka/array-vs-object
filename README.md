@@ -40,8 +40,8 @@ buffer[vIndex + 2] = 2;
 
 ## The benchmark
 
-Disclaimer: It has to be taken with grain of salt, as I'm not sure whether v8 optimizes it 
-in any way under the hood, which would make it entirely useless.
+Disclaimer: The benchmark has to be taken with grain of salt, as I'm not sure whether v8 optimizes it 
+in any way under the hood.
 
 With that disclaimer, [the benchmark](index.js) initializes `1,000` vectors with each approach,
 and then finds the sum of all vectors:
@@ -77,7 +77,7 @@ Array sum: 499500 499500 499500
 Chunk sum: 499500 499500 499500
 ```
 
-Like mentioned above, take these numbers with grain of salt. I did [n-body simulation tests](nbodyTest.js) with these approaches, and results were almost identical:
+Like mentioned above, take these numbers with grain of salt. I did [n-body simulation tests](nbodyTest.js) with these approaches, and performance was almost identical:
 
 ```
 > node nbodyTest.js 
