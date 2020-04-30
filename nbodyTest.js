@@ -36,9 +36,6 @@ suite.add('Compute n-body with Vector(x, y, z)', function() {
   console.log('Object avg position length: ' + objectAvg);
   console.log('Array avg position length: ' + arrayAvg);
   console.log('Float64Array avg position length: ' + nativeArrayAvg);
-  // console.log('(Map) Jaccard top pair at: ' + topPairJaccardMapIndex + ' (' + topPairJaccardMapValue + ')');
-  // console.log('(Obj.keys) Jaccard top pair at: ' + topPairObjectIndex + ' (' + topPairObjectValue + ')');
-  // console.log('(Obj.for in) Jaccard top pair at: ' + topPairObject1Index + ' (' + topPairObject1Value + ')');
 })
 .run({ 'async': true });
 
