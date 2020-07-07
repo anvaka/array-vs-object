@@ -90,6 +90,13 @@ Array avg position length: 4.402166577294573e-15
 Float64Array avg position length: 4.402166577294573e-15
 ```
 
+## Other benchmarks
+
+* [Set vs Object](https://github.com/anvaka/set-vs-object) - what is faster: use object fields or Map/Set collections?
+* [Iterator vs foreach](https://github.com/anvaka/iterator-vs-foreach) - what is faster:
+use `forEach`, `for`, `for .. of`, `[Symbol.Iterator]()`, or `yield *`?
+
+
 ## Feedback
 
 If you want to add other tests - please do so. Pull requests are very much welcomed!
