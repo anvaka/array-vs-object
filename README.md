@@ -65,12 +65,12 @@ we are able to execute this operation per second.
 
 ``` 
 > node --version
-v12.4.0
+v16.4.0
 
 > node index.js
-Compute sum with Vector(x, y, z) x 71,146 ops/sec ±2.04% (79 runs sampled)
-Compute sum with array[x, y, z] x 48,609 ops/sec ±2.45% (84 runs sampled)
-Compute sum with huge chunk x 73,745 ops/sec ±1.49% (85 runs sampled)
+Compute sum with Vector(x, y, z) x 68,281 ops/sec ±2.32% (81 runs sampled)
+Compute sum with array[x, y, z] x 45,295 ops/sec ±3.77% (80 runs sampled)
+Compute sum with huge chunk x 72,070 ops/sec ±2.00% (81 runs sampled)
 Fastest is Compute sum with huge chunk
 Vector sum: 499500 499500 499500
 Array sum: 499500 499500 499500
@@ -81,10 +81,10 @@ Like mentioned above, take these numbers with grain of salt. I did [n-body simul
 
 ```
 > node nbodyTest.js 
-Compute n-body with Vector(x, y, z) x 7.67 ops/sec ±2.08% (23 runs sampled)
-Compute n-body with array[x, y, z] x 7.22 ops/sec ±2.05% (22 runs sampled)
-Compute n-body with Float64Array(3) x 6.83 ops/sec ±3.81% (21 runs sampled)
-Fastest is Compute n-body with Vector(x, y, z)
+Compute n-body with Vector(x, y, z) x 14.80 ops/sec ±2.74% (39 runs sampled)
+Compute n-body with array[x, y, z] x 14.81 ops/sec ±3.17% (40 runs sampled)
+Compute n-body with Float64Array(3) x 14.80 ops/sec ±2.26% (40 runs sampled)
+Fastest is Compute n-body with Float64Array(3),Compute n-body with Vector(x, y, z),Compute n-body with array[x, y, z]
 Object avg position length: 4.402166577294573e-15
 Array avg position length: 4.402166577294573e-15
 Float64Array avg position length: 4.402166577294573e-15
