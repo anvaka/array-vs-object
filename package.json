@@ -1,15 +1,14 @@
 {
-  "name": "set-vs-object",
+  "name": "array-vs-object",
   "version": "1.0.0",
-  "description": "Comparing performance of Set vs Object for counting objects",
+  "description": "Comparing performance of different ways to store 3D vectors in JavaScript",
   "main": "index.js",
   "scripts": {
-    "test": "node index.js"
+    "test": "node index.js && node nbodyTest.js"
   },
   "author": "Andrei Kashcha",
   "license": "MIT",
   "dependencies": {
-    "benchmark": "^2.1.4",
-    "ngraph.random": "1.0.0"
+    "benchmark": "^2.1.4"
   }
 }

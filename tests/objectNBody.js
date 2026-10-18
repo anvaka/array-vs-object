@@ -12,19 +12,16 @@ class Vector {
   }
 
   distanceTo(other) {
-    return Math.hypot(this.x - other.x, this.y - other.y, this.z - other.z);
+    let dx = this.x - other.x;
+    let dy = this.y - other.y;
+    let dz = this.z - other.z;
+    return Math.sqrt(dx * dx + dy * dy + dz * dz);
   }
 
   addScaledDifference(a, b, scale) {
     this.x += (a.x - b.x) * scale;
     this.y += (a.y - b.y) * scale;
     this.z += (a.z - b.z) * scale;
-  }
-
-  add(b) {
-    this.x += b.x;
-    this.y += b.y;
-    this.z += b.z;
   }
 }
 
@@ -84,12 +81,12 @@ module.exports = function createSimulator(bodyCount) {
   }
 
   function getAverageLength() {
-    let sum = new Vector();
+    let sum = 0;
     for (let j = 0; j < bodyCount; ++j) {
-      let srcBody = bodies[j];
-      sum.add(srcBody.position);
+      let p = bodies[j].position;
+      sum += Math.hypot(p.x, p.y, p.z);
     }
-    return Math.hypot(sum.x/bodyCount, sum.y/bodyCount, sum.z/bodyCount);
+    return sum / bodyCount;
   }
  
   function updatedForces() {

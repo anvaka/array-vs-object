@@ -5,19 +5,16 @@ function reset(arr) {
 }
 
 function distanceTo(a, b) {
-  return Math.hypot(a[0] - b[0], a[1] - b[1], a[2] - b[2]);
+  let dx = a[0] - b[0];
+  let dy = a[1] - b[1];
+  let dz = a[2] - b[2];
+  return Math.sqrt(dx * dx + dy * dy + dz * dz);
 }
 
 function addScaledDifference(out, a, b, scale) {
   out[0] += (a[0] - b[0]) * scale;
   out[1] += (a[1] - b[1]) * scale;
   out[2] += (a[2] - b[2]) * scale;
-}
-
-function add(out, b) {
-  out[0] += b[0];
-  out[1] += b[1];
-  out[2] += b[2];
 }
 
 function arr() {
@@ -86,12 +83,12 @@ function createSimulator(bodyCount) {
   }
 
   function getAverageLength() {
-    let sum = [0, 0, 0]
+    let sum = 0;
     for (let j = 0; j < bodyCount; ++j) {
-      let srcBody = bodies[j];
-      add(sum, srcBody.position);
+      let p = bodies[j].position;
+      sum += Math.hypot(p[0], p[1], p[2]);
     }
-    return Math.hypot(sum[0]/bodyCount, sum[1]/bodyCount, sum[2]/bodyCount);
+    return sum / bodyCount;
   }
  
   function updatedForces() {
